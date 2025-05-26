@@ -4,8 +4,6 @@ function App() {
   const [mascotas, setMascotas] = useState([]);
 
   useEffect(() => {
-    // Puedes usar esta línea si tienes el arreglo en línea en lugar de fetch:
-    // setMascotas([...]); 
     fetch('https://gist.githubusercontent.com/josejbocanegra/829a853c6c68880477697acd0490cecc/raw/99c31372b4d419a855e53f0e891246f313a71b20/mascotas.json')
       .then((res) => res.json())
       .then((data) => setMascotas(data))
